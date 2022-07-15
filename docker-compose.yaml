@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  notebooks:
+    # UPDATE THE IMAGE NAME BELOW TO MATCH YOUR RECIPE FAMILY NAME
+    image: recipe-family-<recipe-family-name>:latest
+    user: notebook-user
+    command: jupyter-notebook --ip 0.0.0.0 --no-browser --NotebookApp.token='' --NotebookApp.password=''
+    expose:
+      - "8888"
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - "./recipe-notebooks:/home/notebook-user/recipe-notebooks"
+      - "./exploration-notebooks:/home/notebook-user/exploration-notebooks"
