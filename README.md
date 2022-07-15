@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Unstructured-AI/recipe-family-mybinder-test/core-36/mybinder-test)
+
 # Recipe Family - MyBinder Test
 
 This is a test to see if we can spin up a MyBinder notebook from out recipe templates.
