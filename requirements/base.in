@@ -10,3 +10,6 @@ regex==2022.7.9
 requests==2.28.1
 tqdm==4.64.0
 urllib3==1.26.10
+
+layoutparser[layoutmodels,tesseract]
+git+https://github.com/facebookresearch/detectron2.git@v0.6#egg=detectron2

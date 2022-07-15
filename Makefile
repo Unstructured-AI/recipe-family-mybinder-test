@@ -32,6 +32,7 @@ pip-compile:
 	pip-compile requirements/base.in
 	pip-compile requirements/dev.in
 	pip-compile requirements/test.in
+	sed -i "" 's/^detectron2 @/# detectron2 @/g' requirements/base.txt
 
 
 #########
