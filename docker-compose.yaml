@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   notebooks:
-    # UPDATE THE IMAGE NAME BELOW TO MATCH YOUR RECIPE FAMILY NAME
-    image: recipe-family-<recipe-family-name>:latest
+    image: recipe-family-mybinder-test:latest
     user: notebook-user
     command: jupyter-notebook --ip 0.0.0.0 --no-browser --NotebookApp.token='' --NotebookApp.password=''
     expose:

@@ -1,12 +1,9 @@
-# Recipe Family - <RECIPE FAMILY NAME>
+# Recipe Family - MyBinder Test
 
-<ADD DESCRIPTION OF RECIPE FAMILY>
+This is a test to see if we can spin up a MyBinder notebook from out recipe templates.
 
 ### Updates TODO list
 
-- [ ] Update the recipe family name and description in `README.md` (this file)
-- [ ] Update the recipe family name in the `Makefile`
-- [ ] Update the recipe family name in `recipe-family.yaml`
 - [ ] If needed, install additional dependencies in the `Dockerfile`
 - [ ] Update the recipe name in `docker-compose.yml`
 - [ ] Add any additional requirements you need to `requirements/base.in` and run `make pip-compile`

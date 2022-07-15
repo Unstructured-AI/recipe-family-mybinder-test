@@ -28,9 +28,4 @@ RUN --mount=type=secret,id=known_hosts,dst=/root/.ssh/known_hosts \
     --mount=type=secret,id=ssh_key,dst=/root/.ssh/id_rsa \
     ssh-keyscan -H -t rsa github.com \
     && pip install --no-cache -r requirements-base.txt \
-    && pip install --no-cache -r requirements-dev.txt \
-    && python -c "import nltk; nltk.download('punkt')" \
-    && python -c "import nltk; nltk.download('averaged_perceptron_tagger')"
-
-# NOTE - you may need to install additional dependencies such as the Detectron2
-# model for layout parser depending on the types of ducments the recipe needs to process
+    && pip install --no-cache -r requirements-dev.txt
