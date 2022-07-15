@@ -21,6 +21,8 @@ ENV PYTHONPATH="${PYTHONPATH}:${HOME}"
 COPY requirements/dev.txt requirements-dev.txt
 COPY requirements/base.txt requirements-base.txt
 COPY doc_recipe doc_recipe
+COPY recipe-notebooks recipe-notebooks
+COPY exploration-notebooks exploration-notebooks
 
 RUN apt-get update; apt-get install -y gcc
 RUN pip install --no-cache -r requirements-base.txt \
