@@ -23,9 +23,5 @@ COPY requirements/base.txt requirements-base.txt
 COPY doc_recipe doc_recipe
 
 RUN apt-get update; apt-get install -y gcc
-# NOTE(robinson) - Can remove the secret mount once the repo is public
-RUN --mount=type=secret,id=known_hosts,dst=/root/.ssh/known_hosts \
-    --mount=type=secret,id=ssh_key,dst=/root/.ssh/id_rsa \
-    ssh-keyscan -H -t rsa github.com \
-    && pip install --no-cache -r requirements-base.txt \
+RUN pip install --no-cache -r requirements-base.txt \
     && pip install --no-cache -r requirements-dev.txt
