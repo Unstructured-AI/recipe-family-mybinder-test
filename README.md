@@ -1,15 +1,8 @@
-# Recipe Family - <RECIPE FAMILY NAME>
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Unstructured-AI/recipe-family-mybinder-test/core-36/mybinder-test)
 
-<ADD DESCRIPTION OF RECIPE FAMILY>
+# Recipe Family - MyBinder Test
 
-### Updates TODO list
-
-- [ ] Update the recipe family name and description in `README.md` (this file)
-- [ ] Update the recipe family name in the `Makefile`
-- [ ] Update the recipe family name in `recipe-family.yaml`
-- [ ] If needed, install additional dependencies in the `Dockerfile`
-- [ ] Update the recipe name in `docker-compose.yml`
-- [ ] Add any additional requirements you need to `requirements/base.in` and run `make pip-compile`
+This is a test to see if we can spin up a MyBinder notebook from out recipe templates.
 
 ## Getting Started
 

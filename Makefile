@@ -1,6 +1,5 @@
 PACKAGE_NAME := doc_recipe
-# ADD IN THE NAME OF YOUR RECIPE FAMILY HERE!
-# RECIPE_FAMILY :=
+RECIPE_FAMILY := mybinder-test
 PIP_VERSION := 22.1.2
 
 ###########
@@ -8,21 +7,16 @@ PIP_VERSION := 22.1.2
 ###########
 
 .PHONY: install
-install: install-base install-nltk
+install: install-base
 
 ## install-local:           installs all test and dev requirements
 .PHONY: install-local
-install-local: install-base install-dev install-nltk install-test
+install-local: install-base install-dev install-test
 
 .PHONY: install-base
 install-base:
 	python3 -m pip install pip==${PIP_VERSION}
 	pip install -r requirements/base.txt
-
-.PHONE: install-nltk
-install-nltk:
-	python -c "import nltk; nltk.download('punkt')"
-	python -c "import nltk; nltk.download('averaged_perceptron_tagger')"
 
 .PHONY: install-test
 install-test:
@@ -38,6 +32,7 @@ pip-compile:
 	pip-compile requirements/base.in
 	pip-compile requirements/dev.in
 	pip-compile requirements/test.in
+	sed -i "" 's/^detectron2 @/# detectron2 @/g' requirements/base.txt
 
 
 #########
